@@ -1,7 +1,6 @@
-var lastEvent;
+var parent;
 
 var app = {
-    // Application Constructor
     initialize: function() {
         Log.debug("app.initialize");
 
@@ -11,21 +10,19 @@ var app = {
 
             if ( event.data == "initialize-jimono" ){
                 Log.debug("initialize-jimono");
-                lastEvent = event.source;
+                parent = event.source;
                 event.source.postMessage("子から初期化完了メッセージ", "*");
             }
         });
     },
 };
 
-
 var UiEventHandler = {
     btn01Click: function(){
-        Log.debug("返信 ");
-        lastEvent.postMessage("子からの返信", "*");
+        Log.debug("印刷");
+        parent.postMessage("jimonoPrint", "*");
     }
 };
-
 
 var Log = {
     debug: function(msg) {
