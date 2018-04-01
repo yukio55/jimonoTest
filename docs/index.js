@@ -1,6 +1,3 @@
-
-
-
 var lastEvent;
 
 var app = {
