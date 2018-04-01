@@ -11,22 +11,18 @@ var app = {
 
             if ( event.data == "initialize-jimono" ){
                 Log.debug("initialize-jimono");
-                lastEvent = event;
+                lastEvent = event.source;
                 event.source.postMessage("子から初期化完了メッセージ", "*");
             }
-//          event.source.postMessage("送り返す", "*");
         });
-
     },
-
 };
 
 
 var UiEventHandler = {
     btn01Click: function(){
         Log.debug("返信 ");
-//      lastEvent.source.postMessage("子からの返信", "*");
-        window.opener.postMessage("子からの返信(opener)", "*");
+        lastEvent.postMessage("子からの返信", "*");
     }
 };
 
