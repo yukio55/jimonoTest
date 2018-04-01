@@ -25,7 +25,8 @@ var app = {
 var UiEventHandler = {
     btn01Click: function(){
         Log.debug("返信 ");
-        lastEvent.source.postMessage("子からの返信", "*");
+//      lastEvent.source.postMessage("子からの返信", "*");
+        window.opener.postMessage("子からの返信(opener)", "*");
     }
 };
 
