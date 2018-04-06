@@ -1,6 +1,6 @@
 var parent;
 
-var app = {
+var appY55 = {
     initialize: function() {
         Log.debug("app.initialize");
 
@@ -17,7 +17,7 @@ var app = {
     },
 };
 
-var UiEventHandler = {
+var UiEventHandlerY55 = {
     btn01Click: function(){
         Log.debug("印刷");
         parent.postMessage("jimonoPrint", "*");
@@ -37,4 +37,4 @@ var Log = {
 };
 
 
-app.initialize();
+appY55.initialize();
