@@ -21,6 +21,11 @@ var UiEventHandler = {
     btn01Click: function(){
         Log.debug("印刷");
         parent.postMessage("jimonoPrint", "*");
+    },
+
+    btn01Click: function(){
+        Log.debug("サブウィンドウ起動");        
+        window.open("subwindow.html","sub test",null);
     }
 };
 
