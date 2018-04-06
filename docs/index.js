@@ -3,6 +3,8 @@ var parent;
 var appY55 = {
     initialize: function() {
         Log.debug("app.initialize");
+        Log.debug("■　ああああ");
+        Log.debug("■" + window.navigator.userAgent);
 
 
         window.addEventListener('message', function(event){
