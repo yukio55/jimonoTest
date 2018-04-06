@@ -23,7 +23,7 @@ var UiEventHandler = {
         parent.postMessage("jimonoPrint", "*");
     },
 
-    btn01Click: function(){
+    btn02Click: function(){
         Log.debug("サブウィンドウ起動");        
         window.open("subwindow.html","sub test",null);
     }
